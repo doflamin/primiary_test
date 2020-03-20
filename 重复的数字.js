@@ -33,6 +33,4 @@ function findSame(arr) {
 }
 
 
-
-
 console.log('---->', findSame(arr1))
