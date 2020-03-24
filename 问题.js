@@ -1431,7 +1431,7 @@ function JS的垃圾回收机制(){
 
 
 }
-function js一些乱码七糟的东西() {z
+function js一些乱码七糟的东西() {
     function 0.1 + 0.2 != 0.3() {
         // 首先声明这不是bug，原因在与十进制到二进制的转换导致的精度问题！其次这几乎出现在很多的编程语言中：
         // C/C++,Java,Javascript中，准确的说：
