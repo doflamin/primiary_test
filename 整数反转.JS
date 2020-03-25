@@ -16,38 +16,14 @@
 
 const num = 1243;
 
-function reverse(params) {
-  let isnegative = false;
-  const fushu = -2;
+var reverse = function(x) {
+    const border = 2**31
+    const max = border - 1
+    const min = -border
 
- 
-  if (params < 0) {
-    isnegative = true;
-    params = Math.abs(params)
-  }
-  let result =  (params+'').split('').reverse();
-  const newArr = [];
-  let stop = false;
-
-  for (let i = 0; i < result.length; i++) {
-    if (result[i] !== '0') {
-      stop = true
-    }
-
-    if (stop) {
-      newArr.push(result[i])
-    }
-    
-  }
-  result = newArr.join('')
-  if (isnegative) {
-    result = '-'+result
-  }
-  if (result> Math.pow(-2, 31) || result <= (Math.pow(2, 31)-1)) {
-    return 0;
-  }
-  return  result
-}
+    const result = (x > 0 ? 1 : -1) * String(x).split('').filter(x => x !== '-').reverse().join('')
+    return result > max || result < min ? 0 : result 
+};
 
 
 console.log(reverse(num))
