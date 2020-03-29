@@ -36,14 +36,10 @@
 
 
 
-// 思路
-// 利用对象 o 遍历存储 各牌 出现的次数，并用 Object.values(o) 转化为各牌数对应数组。
-// 存储 并使用Array.every() 判断数组各牌数是否整除 x 。
-
-
 function haha(deck){
   const obj = {};
   let max = 0;
+  // 利用对象 o 遍历存储 各牌 出现的次数，并用 Object.values(o) 并且转化为各牌数对应数组
   for (let i = 0; i < deck.length; i++) {
     const item = deck[i];
     if (!obj[item]) {
@@ -54,6 +50,7 @@ function haha(deck){
     max = Math.max(obj[item],max)
   }
   const arr = Object.values(obj);
+  //并使用Array.every() 判断数组各牌数是否整除 x
   let X = 2;
   while(max>=X){
     if (arr.every(item=>item%X === 0)) {
